@@ -1,4 +1,4 @@
-# Color Grid Application
+# Color Grid Standalone Application
 
 ## Running Color Grid Application Locally Command Line
 Color Grid Application is a standalone java application built using [Maven](https://spring.io/guides/gs/maven/). You can build a jar file and run it from the command line:
