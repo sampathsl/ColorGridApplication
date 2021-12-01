@@ -63,7 +63,7 @@ public class Node {
     @Override
     public int hashCode() {
         int result = nodeId;
-        result = 31 * result + (int) color;
+        result = 31 * result + color;
         result = 31 * result + coordinate.hashCode();
         return result;
     }

@@ -14,12 +14,11 @@ public class ColorChallenge {
     private int rowNum;
     protected static final char[] COLORS = {'R', 'B', 'G'};
     private HashMap<Coordinate, Node> grid;
+    Random random = new Random();
 
     public void initializeGame(int colNum, int rowNum) {
         this.colNum = colNum;
         this.rowNum = rowNum;
-        // Randomly Generate Grid For Testing
-        Random random = new Random();
         this.grid = new HashMap<>();
         for (int count = 0; count < colNum * rowNum; count++) {
             int x = count % colNum;
@@ -87,13 +86,13 @@ public class ColorChallenge {
         Block block = new Block(startNode.getColor());
         block.addNode(startNode);
 
-        LinkedList<Node> nodesToVisit = new LinkedList<>();
+        Stack<Node> nodesToVisit = new Stack<>();
         nodesToVisit.addAll(findNeighouringNodes(startNode, block));
 
         while(!nodesToVisit.isEmpty()) {
-            Node nextNode = nodesToVisit.remove();
-            block.addNode(nextNode);
-            nodesToVisit.addAll(findNeighouringNodes(nextNode, block));
+            Node lastNode = nodesToVisit.pop();
+            block.addNode(lastNode);
+            nodesToVisit.addAll(findNeighouringNodes(lastNode, block));
         }
 
         return block;

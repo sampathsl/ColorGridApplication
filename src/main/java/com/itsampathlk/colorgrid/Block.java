@@ -25,7 +25,7 @@ public class Block implements Comparable<Block> {
     }
 
     public Set<Coordinate> getAllCoordinates() {
-        return nodes.stream().map(n -> n.getCoordinate()).collect(Collectors.toSet());
+        return nodes.stream().map(Node::getCoordinate).collect(Collectors.toSet());
     }
 
     public boolean addNode(Node node) {
