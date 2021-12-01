@@ -44,7 +44,12 @@ The following items should be installed in your system:
 # Response
 
 Once run the application, you can see in the command prompt the randomly generated input color grid and out put result as the largest block with same color area, marked with `*` symbols.
-   
+
+# References
+
+1) https://www.programiz.com/dsa/graph-dfs
+2) https://www.geeksforgeeks.org/difference-between-bfs-and-dfs/
+
 # License
 
 The Color Grid Application is released under version 2.0 of the [Apache License](https://www.apache.org/licenses/LICENSE-2.0).
